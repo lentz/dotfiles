@@ -1,0 +1,18 @@
+[user]
+	name = Jesse Lentz
+	email = 
+[color]
+	ui = true
+[credential]
+	helper = osxkeychain
+[alias]
+	s = status
+	co = checkout
+	ci = commit
+	d = diff --word-diff
+	ls = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(reset) %C(auto)%d%C(reset) %C(white)%s%C(reset) %C(green)(%ar)%C(reset) - %C(cyan)%an%C(reset)'
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate --numstat
+[push]
+	default = simple
+[pull]
+	rebase = true
