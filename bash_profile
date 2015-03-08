@@ -1,7 +1,5 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && \
 
-alias ll="ls -l"
-
 export CLICOLOR=1
 
 export LSCOLORS=GxFxCxDxBxegedabagaced
