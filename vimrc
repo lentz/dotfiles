@@ -16,19 +16,16 @@ set showcmd
 set laststatus=2
 set autowrite
  
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
-
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" Switch syntax highlighting on
-syntax on
- 
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
@@ -55,6 +52,11 @@ set splitright
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+" Color scheme
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
