@@ -8,3 +8,4 @@ alias ll='ls -Alh'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
