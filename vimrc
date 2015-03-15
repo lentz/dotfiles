@@ -38,7 +38,7 @@ set incsearch
 set number
 
 map q <nop>
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
