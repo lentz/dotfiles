@@ -4,7 +4,7 @@ set nocompatible
 
 " Leader
 let mapleader = " "
- 
+
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
@@ -15,7 +15,15 @@ set noswapfile
 set showcmd
 set laststatus=2
 set autowrite
- 
+
+" Set hidden characters for list mode
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+
+" Show additional lines when on the last line
+set scrolloff=1
+set sidescrolloff=5
+set display+=lastline
+
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -29,13 +37,17 @@ endif
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
+" Use 2 spaces for all indentation
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set number
+
 set ignorecase
 set smartcase
 set incsearch
-set number
+" Use <C-L> to clear the highlighting of :set hlsearch.
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 map q <nop>
 inoremap jk <Esc>
