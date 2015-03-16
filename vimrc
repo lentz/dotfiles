@@ -8,6 +8,10 @@ let mapleader = " "
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
+" Allow hiding buffers without saving
+set hidden
+
+" Don't create backup and swap files
 set nobackup
 set nowritebackup
 set noswapfile
