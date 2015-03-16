@@ -70,6 +70,9 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" Use powerline fonts for fancy airline symbols
+let g:airline_powerline_fonts = 1
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
