@@ -8,17 +8,15 @@ let mapleader = " "
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
 
-" Allow hiding buffers without saving
+" Save files on focus lost and allow hidden buffers
+au FocusLost * :wa
+set autowrite
 set hidden
 
 " Don't create backup and swap files
 set nobackup
 set nowritebackup
 set noswapfile
-
-set showcmd
-set laststatus=2
-set autowrite
 
 " Set hidden characters for list mode
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -27,12 +25,8 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set scrolloff=1
 set sidescrolloff=5
 set display+=lastline
-
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+set showcmd
+set laststatus=2
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -47,14 +41,35 @@ set shiftwidth=2
 set expandtab
 set number
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Always use vertical diffs
+set diffopt+=vertical
+
+" Searching
+nnoremap / /\v
+vnoremap / /\v
 set ignorecase
 set smartcase
 set incsearch
-" Use <C-L> to clear the highlighting of :set hlsearch.
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+set gdefault
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
 
+" Key mappings
+
+" Prevent recording when trying to quit
 map q <nop>
 inoremap jk <Esc>
+nnoremap ; :
+set pastetoggle=<leader>p
+
+" Strip trailing whitespace
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -62,12 +77,11 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
-
-" Always use vertical diffs
-set diffopt+=vertical
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " Color scheme
 syntax enable
