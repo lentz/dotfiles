@@ -27,3 +27,6 @@ export EDITOR=vim
 # Aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# Must occur after local config for aliases
+eval `dircolors ~/.dir_colors`
+
