@@ -16,7 +16,8 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 autoload -Uz compinit
 compinit
 
-# load color names for use in prompt
+# Load color names and allow expansion for prompt
+setopt prompt_subst
 autoload -U colors && colors
 
 export EDITOR=vim
