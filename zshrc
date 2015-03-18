@@ -3,6 +3,9 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 setopt autocd extendedglob nomatch notify
+# Fix issue using carrot in git refs
+setopt NO_NOMATCH
+
 unsetopt beep
 bindkey -e
 bindkey "^R" history-incremental-search-backward

@@ -3,7 +3,7 @@
 set nocompatible
 
 " Leader
-let mapleader = " "
+let mapleader = ","
 
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
