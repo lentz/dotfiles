@@ -102,6 +102,9 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" Powerline fonts for status bar icons
+let g:airline_powerline_fonts = 1
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
