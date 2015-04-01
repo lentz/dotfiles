@@ -48,6 +48,9 @@ set splitright
 " Always use vertical diffs
 set diffopt+=vertical
 
+set history=1000
+set undolevels=1000
+
 " Searching
 nnoremap / /\v
 vnoremap / /\v
@@ -56,7 +59,7 @@ set smartcase
 set incsearch
 set gdefault
 set hlsearch
-nnoremap <leader><space> :noh<cr>
+nmap <silent> <leader><space> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
 
@@ -71,11 +74,19 @@ set pastetoggle=<leader>p
 " Strip trailing whitespace
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Insert blank lines above/below
+nnoremap <silent> ]<Space> :<C-u>put =repeat(nr2char(10),v:count)<Bar>execute "'[-1"<CR>
+nnoremap <silent> [<Space> :<C-u>put!=repeat(nr2char(10),v:count)<Bar>execute "']+1"<CR>
+
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Don't skip over wrapped lines when moving
+nnoremap j gj
+nnoremap k gk
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
