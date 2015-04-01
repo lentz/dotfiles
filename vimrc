@@ -21,6 +21,9 @@ set noswapfile
 " Set hidden characters for list mode
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
+" Don't wrap lines
+set nowrap
+
 " Show additional lines when on the last line
 set scrolloff=1
 set sidescrolloff=5
