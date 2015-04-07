@@ -10,7 +10,8 @@ set backspace=indent,eol,start
 
 " Save files on focus lost and allow hidden buffers
 au FocusLost * :wa
-set autowrite
+set autowriteall
+set autoread
 set hidden
 
 " Don't create backup and swap files
