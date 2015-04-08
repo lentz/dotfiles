@@ -56,8 +56,6 @@ set history=1000
 set undolevels=1000
 
 " Searching
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set incsearch

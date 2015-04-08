@@ -7,7 +7,6 @@ alias ...='cd ../..'
 alias ls='ls --color=auto'
 alias l='ls'
 alias ll='ls -Alh'
-alias tmux='tmux -u'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
