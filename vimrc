@@ -21,6 +21,7 @@ set noswapfile
 
 " Set hidden characters for list mode
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+set list
 
 " Don't wrap lines
 set nowrap
@@ -71,14 +72,9 @@ vnoremap <tab> %
 map q <nop>
 inoremap jk <Esc>
 nnoremap ; :
-set pastetoggle=<leader>p
 
 " Strip trailing whitespace
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
-
-" Insert blank lines above/below
-nnoremap <silent> ]<Space> :<C-u>put =repeat(nr2char(10),v:count)<Bar>execute "'[-1"<CR>
-nnoremap <silent> [<Space> :<C-u>put!=repeat(nr2char(10),v:count)<Bar>execute "']+1"<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
