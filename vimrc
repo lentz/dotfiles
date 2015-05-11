@@ -93,6 +93,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 set wildignore=*/log/*,*/tmp/*
+let g:ctrlp_show_hidden = 1
 
 " Color scheme
 syntax enable
