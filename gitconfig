@@ -14,6 +14,9 @@
   rebase = true
 [fetch]
   prune = true
+[rebase]
+  autoSquash = true
+  autoStash = true
 [core]
   editor = vim
 [include]
