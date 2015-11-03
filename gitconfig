@@ -10,6 +10,7 @@
   amend = commit --amend
 [push]
   default = simple
+  followTags = true
 [pull]
   rebase = true
 [fetch]
