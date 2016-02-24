@@ -1,6 +1,6 @@
 alias vi=vim
 alias be='bundle exec'
-alias console='pry -r ./config/environment.rb'
+alias console='be pry -r ./config/environment.rb'
 alias g=git
 alias ln='ln -v'
 alias mkdir='mkdir -p'
