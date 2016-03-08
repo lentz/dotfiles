@@ -106,6 +106,8 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+set colorcolumn=110
+
 " Powerline fonts for status bar icons
 let g:airline_powerline_fonts = 1
 
