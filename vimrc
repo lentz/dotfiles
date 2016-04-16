@@ -77,7 +77,7 @@ nnoremap ; :
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Run rubocop on current file
-nnoremap <leader>r :!rubocop -a %<CR>
+nnoremap <leader>r :!bundle exec rubocop -a %<CR>
 
 " Ggrep whole project for the word under cursor
 nnoremap <leader>g :Ggrep '<cword>'<CR>
