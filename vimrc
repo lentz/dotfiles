@@ -82,6 +82,9 @@ nnoremap <leader>r :!bundle exec rubocop -a %<CR>
 " Ggrep whole project for the word under cursor
 nnoremap <leader>g :Ggrep '<cword>'<CR>
 
+" Run test under cursor
+nnoremap <leader>t :execute("!bundle exec rspec " . expand("%p") . ":" . line("."))<CR>
+
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
