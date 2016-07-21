@@ -101,7 +101,7 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-set wildignore=*/log/*,*/tmp/*
+set wildignore=*/log/*,*/tmp/*,*/.bundle/*
 let g:ctrlp_show_hidden = 1
 
 " Color scheme
