@@ -84,6 +84,7 @@ nnoremap <leader>g :Ggrep '<cword>'<CR>
 
 " Run test under cursor
 nnoremap <leader>t :execute("!bundle exec rspec " . expand("%p") . ":" . line("."))<CR>
+nnoremap <leader>T :execute("!bundle exec rspec " . expand("%p"))<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
