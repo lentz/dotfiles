@@ -31,6 +31,9 @@ precmd () { __git_ps1 "[%{$fg[yellow]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m %{
 
 export EDITOR=vim
 
+# Default Less options
+export LESS="-r -S"
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
