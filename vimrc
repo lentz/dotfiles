@@ -99,6 +99,9 @@ nnoremap <C-l> <C-w>l
 nnoremap j gj
 nnoremap k gk
 
+" Fugitive shortcuts
+nnoremap <leader>gls :Git ls<CR>
+
 set wildignore=*/log/*,*/tmp/*,*/.bundle/*
 let g:ctrlp_show_hidden = 1
 
