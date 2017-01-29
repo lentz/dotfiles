@@ -66,6 +66,10 @@ nmap <silent> <leader><space> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
 
+" Netrw
+let g:netrw_banner=0 " Hide banner
+let g:netrw_liststyle=3 " Tree browsing
+
 " Key mappings
 
 " Prevent recording when trying to quit
