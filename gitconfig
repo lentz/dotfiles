@@ -1,3 +1,5 @@
+[init]
+  templatedir = ~/.git_template
 [alias]
   s = status
   co = checkout
