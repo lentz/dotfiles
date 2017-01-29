@@ -71,9 +71,10 @@ let g:netrw_banner=0 " Hide banner
 let g:netrw_liststyle=3 " Tree browsing
 
 " Key mappings
-
 " Prevent recording when trying to quit
 map q <nop>
+" Disable Ex-mode
+map Q <nop>
 inoremap jk <Esc>
 nnoremap ; :
 
