@@ -45,6 +45,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set number
+set relativenumber
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -55,6 +56,11 @@ set diffopt+=vertical
 
 set history=1000
 set undolevels=1000
+
+" Enable spell check and completion for prose and commit messages
+autocmd FileType gitcommit,md,markdown setlocal spell
+set complete+=kspell
+set spelllang=en_us
 
 " Searching
 set ignorecase
