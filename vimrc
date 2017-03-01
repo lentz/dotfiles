@@ -58,7 +58,7 @@ set history=1000
 set undolevels=1000
 
 " Enable spell check and completion for prose and commit messages
-autocmd FileType gitcommit,md,markdown setlocal spell
+autocmd FileType gitcommit,md,markdown,text setlocal spell
 set complete+=kspell
 set spelllang=en_us
 
