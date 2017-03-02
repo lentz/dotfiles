@@ -34,6 +34,9 @@ export EDITOR=vim
 # Default Less options
 export LESS="-r -S"
 
+# Default grep options
+export GREP_OPTIONS="--color --extended-regexp --line-buffered"
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
