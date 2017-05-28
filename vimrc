@@ -45,7 +45,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set number
-set relativenumber
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -94,11 +93,14 @@ nnoremap <leader>r :!bundle exec rubocop -a %<CR>
 nnoremap <leader>g :Ggrep '<cword>'<CR>
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+autocmd FileType ruby map <Leader>t :call RunCurrentSpecFile()<CR>
+autocmd FileType ruby map <Leader>s :call RunNearestSpec()<CR>
+autocmd FileType ruby map <Leader>l :call RunLastSpec()<CR>
+autocmd FileType ruby map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "!bundle exec rspec {spec}"
+
+" Javascript linting and testing
+autocmd FileType javascript nnoremap <leader>l :!eslint %<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -113,7 +115,7 @@ nnoremap k gk
 " Fugitive shortcuts
 nnoremap <leader>gls :Git ls<CR>
 
-set wildignore=*/log/*,*/tmp/*,*/.bundle/*
+set wildignore=*/log/*,*/tmp/*,*/.bundle/*,*/node_modules/*
 let g:ctrlp_show_hidden = 1
 
 " Color scheme
