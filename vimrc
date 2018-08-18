@@ -87,7 +87,7 @@ nnoremap ; :
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Run rubocop on current file
-nnoremap <leader>r :!bundle exec rubocop -a %<CR>
+nnoremap <leader>r :!clear && bundle exec rubocop -a %<CR>
 
 " Ggrep whole project for the word under cursor
 nnoremap <leader>g :Ggrep '<cword>'<CR>
@@ -100,7 +100,7 @@ autocmd FileType ruby map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "!bundle exec rspec {spec}"
 
 " Javascript linting and testing
-autocmd FileType javascript nnoremap <leader>l :!eslint %<CR>
+autocmd FileType javascript nnoremap <leader>l :!clear && eslint %<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
