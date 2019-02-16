@@ -83,6 +83,9 @@ map Q <nop>
 inoremap jk <Esc>
 nnoremap ; :
 
+" Close current buffer
+nnoremap <leader>d :bd<CR>
+
 " Strip trailing whitespace
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -115,8 +118,11 @@ nnoremap k gk
 " Fugitive shortcuts
 nnoremap <leader>gls :Git ls<CR>
 
-set wildignore=*/log/*,*/tmp/*,*/.bundle/*,*/node_modules/*
+set wildignore+=*/log/*,*/tmp/*,*/.bundle/*,*/node_modules/*
 let g:ctrlp_show_hidden = 1
+
+" Set HTML syntax for handlebars templates
+autocmd BufNewFile,BufRead *.handlebars set syntax=html
 
 " Color scheme
 syntax enable
