@@ -50,9 +50,6 @@ set number
 set splitbelow
 set splitright
 
-" Always use vertical diffs
-set diffopt+=vertical
-
 set history=1000
 set undolevels=1000
 
