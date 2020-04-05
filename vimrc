@@ -86,8 +86,11 @@ nnoremap <leader>d :bd<CR>
 " Strip trailing whitespace
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
-" Run rubocop on current file
+" Run rubocop on current buffer
 nnoremap <leader>r :!clear && bundle exec rubocop -a %<CR>
+
+" Run Prettier on current buffer
+nnoremap <leader>p :silent %!prettier --stdin-filepath %<CR>
 
 " Ggrep whole project for the word under cursor
 nnoremap <leader>g :Ggrep '<cword>'<CR>
@@ -115,7 +118,7 @@ nnoremap k gk
 " Fugitive shortcuts
 nnoremap <leader>gls :Git ls<CR>
 
-set wildignore+=*/log/*,*/tmp/*,*/.bundle/*,*/node_modules/*
+set wildignore+=*/log/*,*/tmp/*,*/.bundle/*,*/node_modules/*,*/coverage/*,*/dist/*
 let g:ctrlp_show_hidden = 1
 
 " Set HTML syntax for handlebars templates
