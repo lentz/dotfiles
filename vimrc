@@ -118,8 +118,11 @@ nnoremap k gk
 " Fugitive shortcuts
 nnoremap <leader>gls :Git ls<CR>
 
-set wildignore+=*/log/*,*/tmp/*,*/.bundle/*,*/node_modules/*,*/coverage/*,*/dist/*
+set wildignore+=*/log/*,*/tmp/*,*/node_modules/*,*/coverage/*,*/dist/*,*/vendor/bundle/*
 let g:ctrlp_show_hidden = 1
+
+" Default to vertical diffs
+set diffopt=vertical
 
 " Set HTML syntax for handlebars templates
 autocmd BufNewFile,BufRead *.handlebars set syntax=html
