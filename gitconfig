@@ -20,7 +20,7 @@
   autoSquash = true
   autoStash = true
 [core]
-  editor = vim
+  editor = nvim
 [init]
   defaultBranch = main
 [include]

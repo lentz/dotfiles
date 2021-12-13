@@ -1,4 +1,5 @@
-alias vi=vim
+alias vi=nvim
+alias vim=nvim
 alias be='bundle exec'
 alias console='be pry -r ./config/environment.rb'
 alias g=git
