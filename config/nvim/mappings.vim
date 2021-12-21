@@ -43,3 +43,5 @@ nnoremap k gk
 " Fugitive shortcuts
 nnoremap <leader>gls :Git ls<CR>
 
+" FZF
+nnoremap <C-p> :GFiles<CR>
