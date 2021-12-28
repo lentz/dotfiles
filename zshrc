@@ -48,3 +48,4 @@ export PATH=./node_modules/.bin:$PATH
 # Must occur after local config for aliases
 eval `dircolors ~/.dir_colors`
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
