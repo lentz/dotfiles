@@ -1,0 +1,4 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript", "json", "markdown", "typescript", "yaml"],
+  "diagnostic.checkCurrentLine": true
+}

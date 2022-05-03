@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-angular']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-angular', 'coc-prettier']
 
 set signcolumn=number
 
