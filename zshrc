@@ -48,4 +48,11 @@ export PATH=./node_modules/.bin:$PATH
 # Must occur after local config for aliases
 eval `dircolors ~/.dir_colors`
 
+# FZF autocompletion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# flyctl completion
+[ -f ~/.flyctl-completion.zsh ] && source ~/.flyctl-completion.zsh
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
