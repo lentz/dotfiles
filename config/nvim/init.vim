@@ -57,6 +57,10 @@ set diffopt=vertical
 syntax enable
 set colorcolumn=110
 
+let g:loaded_perl_provider = 0
+let g:loaded_python3_provider = 0
+let g:loaded_ruby_provider = 0
+
 " Vim Plug plugins
 call plug#begin(stdpath('data') . '/plugged')
 
