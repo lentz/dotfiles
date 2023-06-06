@@ -21,7 +21,6 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-      vim.opt.termguicolors = true
       vim.cmd.colorscheme('gruvbox')
     end,
   },
@@ -48,6 +47,8 @@ require('lazy').setup({
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'L3MON4D3/LuaSnip'},
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
     }
   },
 })

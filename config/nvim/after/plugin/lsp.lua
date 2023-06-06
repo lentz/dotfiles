@@ -1,14 +1,9 @@
-local lsp = require('lsp-zero').preset({})
-
-lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
-
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { buffer = true })
-  vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, { buffer = true })
-end)
+local lsp = require('lsp-zero').preset('recommended')
 
 lsp.ensure_installed({
   'angularls',
+  'cssls',
+  'jsonls',
   'tsserver',
 })
 
@@ -20,5 +15,12 @@ lsp.set_sign_icons({
   hint = '⚑',
   info = '»',
 })
+
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { buffer = true })
+  vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, { buffer = true })
+end)
 
 lsp.setup()

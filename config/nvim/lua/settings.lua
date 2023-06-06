@@ -18,6 +18,7 @@ vim.opt.colorcolumn = '110' -- Show vertical line for wrapping guide
 vim.opt.diffopt = 'vertical' -- Default to vertical diffs
 vim.opt.wildmode = { 'list', 'longest' } -- complete files like a shell
 vim.opt.updatetime = 300 -- Avoid delay of default 4s update time
+vim.opt.termguicolors = true -- Enable 24-bit RGB colors
 
 -- Show additional lines when on the last line
 vim.opt.scrolloff = 1

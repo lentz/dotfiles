@@ -14,4 +14,5 @@ telescope.setup({
   },
 })
 
+vim.opt.autochdir = true
 vim.keymap.set('n', '<C-p>',  '<cmd>Telescope git_files<cr>')
