@@ -1,7 +1,7 @@
 require('settings')
 require('mappings')
 
--- Use Lazy to manage plugins
+-- Install Lazy if necessary to manage plugins
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -50,5 +50,15 @@ require('lazy').setup({
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},
     }
+  },
+  {
+    'nvim-tree/nvim-tree.lua',
+    config = function()
+      -- Disable netrw
+      vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+
+      require('nvim-tree').setup()
+    end,
   },
 })
