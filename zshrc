@@ -34,9 +34,6 @@ export EDITOR=vim
 # Default Less options
 export LESS="-r -S"
 
-# Default grep options
-export GREP_OPTIONS="--color --extended-regexp --line-buffered"
-
 export PATH=./node_modules/.bin:$PATH
 
 # Local config
@@ -50,6 +47,8 @@ eval `dircolors ~/.dir_colors`
 
 # FZF autocompletion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # flyctl completion
 [ -f ~/.flyctl-completion.zsh ] && source ~/.flyctl-completion.zsh

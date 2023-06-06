@@ -1,7 +1,7 @@
 alias vi=nvim
 alias vim=nvim
+alias grep=rg
 alias be='bundle exec'
-alias console='be pry -r ./config/environment.rb'
 alias g=git
 alias ln='ln -v'
 alias mkdir='mkdir -p'
