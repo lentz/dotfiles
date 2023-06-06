@@ -24,3 +24,15 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+local cmp = require('cmp')
+
+cmp.setup({
+  preselect = 'item',
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }
+})
