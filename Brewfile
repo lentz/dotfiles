@@ -11,4 +11,5 @@ brew "tmux" # terminal multiplexer
 brew "tree" # pretty-print directory contents
 brew "wget" # internet file retriever
 
+cask "alacritty" # Terminal emulator
 cask "font-dejavu-sans-mono-nerd-font" # Programming font patched with dev icons
