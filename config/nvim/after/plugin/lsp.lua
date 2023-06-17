@@ -9,6 +9,8 @@ lsp.ensure_installed({
 
 require'lspconfig'.angularls.setup({})
 
+vim.diagnostic.config({ virtual_text = { prefix = '●' } })
+
 lsp.set_sign_icons({
   error = '✘',
   warn = '▲',

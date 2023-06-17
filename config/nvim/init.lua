@@ -59,6 +59,9 @@ require('lazy').setup({
   },
   {
     'nvim-tree/nvim-tree.lua',
+    keys = {
+      { '<leader>t', '<cmd>NvimTreeFindFileToggle<cr>', desc = 'Toggle Neovim Tree' },
+    },
     config = function()
       -- Disable netrw
       vim.g.loaded_netrw = 1
