@@ -47,7 +47,7 @@ eval `dircolors ~/.dir_colors`
 
 # FZF autocompletion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # flyctl completion
