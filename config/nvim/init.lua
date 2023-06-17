@@ -27,7 +27,12 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   { 'nvim-lualine/lualine.nvim', opts = { theme = 'gruvbox' } },
   'nvim-treesitter/nvim-treesitter',
-  'tpope/vim-fugitive',
+  {
+    'tpope/vim-fugitive',
+    keys = {
+      { '<leader>gs', '<cmd>Git<cr>', desc = 'Git status' },
+    },
+  },
   'tpope/vim-unimpaired',
   'tpope/vim-surround',
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
