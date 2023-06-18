@@ -10,6 +10,8 @@ vim.opt.autoread = true
 vim.opt.backup = false
 vim.opt.writebackup = false
 
+
+vim.opt.clipboard = 'unnamedplus' -- Sync clipboard with system
 vim.opt.list = true -- Set hidden characters for list mode
 vim.opt.wrap = false -- Don't wrap lines
 vim.opt.backspace = 'indent,eol,start' -- Make backspace behave in a sane manner
