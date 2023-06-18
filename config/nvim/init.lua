@@ -26,13 +26,11 @@ require('lazy').setup({
   },
   'nvim-tree/nvim-web-devicons',
   { 'nvim-lualine/lualine.nvim', opts = { theme = 'gruvbox' } },
-  'nvim-treesitter/nvim-treesitter',
   {
-    'tpope/vim-fugitive',
-    keys = {
-      { '<leader>gs', '<cmd>Git<cr>', desc = 'Git status' },
-    },
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
   },
+  'tpope/vim-fugitive',
   'tpope/vim-unimpaired',
   'tpope/vim-surround',
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -59,9 +57,6 @@ require('lazy').setup({
   },
   {
     'nvim-tree/nvim-tree.lua',
-    keys = {
-      { '<leader>t', '<cmd>NvimTreeFindFileToggle<cr>', desc = 'Toggle Neovim Tree' },
-    },
     config = function()
       -- Disable netrw
       vim.g.loaded_netrw = 1
