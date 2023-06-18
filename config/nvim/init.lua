@@ -65,4 +65,5 @@ require('lazy').setup({
       require('nvim-tree').setup()
     end,
   },
+  { 'numToStr/Comment.nvim', config = true },
 })
