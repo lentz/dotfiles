@@ -28,6 +28,7 @@ require('lazy').setup({
   { 'nvim-lualine/lualine.nvim', opts = { theme = 'gruvbox' } },
   {
     'nvim-treesitter/nvim-treesitter',
+    dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
     build = ':TSUpdate',
   },
   'tpope/vim-fugitive',
