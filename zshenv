@@ -1,2 +1,2 @@
 # Support aliases in non-interactive shell
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases.sh ]] && source ~/.aliases.sh

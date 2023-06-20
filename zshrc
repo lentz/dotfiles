@@ -40,7 +40,7 @@ export PATH=./node_modules/.bin:$PATH
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # Aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases.sh ]] && source ~/.aliases.sh
 
 # Must occur after local config for aliases
 eval `dircolors ~/.dir_colors`
