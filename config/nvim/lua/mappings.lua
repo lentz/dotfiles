@@ -6,7 +6,7 @@ vim.keymap.set('n', 'q', '<nop>') -- Prevent recording when trying to quit
 vim.keymap.set('n', 'Q', '<nop>') -- Disable Ex-mode
 vim.keymap.set('n', '<leader><space>', ':nohlsearch<CR>') -- Hide search highlighting
 vim.keymap.set('n', '<leader>d', ':bd<CR>') -- Close current buffer
-vim.keymap.set('n', '<leader>g', "<cmd>Ggrep <cword><CR>" ) -- grep whole project for the word under cursor
+vim.keymap.set('n', '<leader>gw', '<cmd>Ggrep <cword><CR>') -- grep whole project for the word under cursor
 
 -- Quicker window movement
 vim.keymap.set('n', '<C-j>', '<C-w>j')
