@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -e
-
-ctags -R --exclude=node_modules .

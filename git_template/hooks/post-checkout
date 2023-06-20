@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -e
-
-"$HOME"/.git_template/hooks/ctags
