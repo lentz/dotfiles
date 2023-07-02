@@ -25,7 +25,10 @@ require('lazy').setup({
     end,
   },
   'nvim-tree/nvim-web-devicons',
-  { 'nvim-lualine/lualine.nvim', opts = { theme = 'gruvbox' } },
+  {
+    'nvim-lualine/lualine.nvim',
+    opts = { sections = { lualine_x = { 'filetype' } } },
+  },
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
