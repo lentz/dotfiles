@@ -50,8 +50,5 @@ eval `dircolors ~/.dir_colors`
 export FZF_DEFAULT_COMMAND='rg --files --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# flyctl completion
-[ -f ~/.flyctl-completion.zsh ] && source ~/.flyctl-completion.zsh
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
