@@ -10,14 +10,14 @@ vim.opt.autoread = true
 vim.opt.backup = false
 vim.opt.writebackup = false
 
-
 vim.opt.clipboard = 'unnamedplus' -- Sync clipboard with system
+vim.opt.cursorline = true -- Highlight current line
 vim.opt.list = true -- Set hidden characters for list mode
 vim.opt.wrap = false -- Don't wrap lines
 vim.opt.backspace = 'indent,eol,start' -- Make backspace behave in a sane manner
 vim.opt.signcolumn = 'number' -- Show errors in line number column instead of a new column
 vim.opt.colorcolumn = '110' -- Show vertical line for wrapping guide
-vim.opt.diffopt = 'vertical' -- Default to vertical diffs
+vim.opt.diffopt = 'vertical,linematch:60' -- Default to vertical diffs and improve diff output
 vim.opt.wildmode = { 'list', 'longest' } -- complete files like a shell
 vim.opt.updatetime = 300 -- Avoid delay of default 4s update time
 vim.opt.termguicolors = true -- Enable 24-bit RGB colors
@@ -38,13 +38,6 @@ vim.opt.number = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Enable spell check and completion for prose and commit messages
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'gitcommit', 'md', 'markdown', 'text' },
-  command = 'setlocal spell'
-})
-table.insert(vim.opt.complete, 'kspell')
-
 -- Searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -56,3 +49,20 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
+
+-- Manual filetype detection
+vim.filetype.add({
+  extension = {
+    tfbackend = 'terraform',
+  },
+  pattern = {
+    ['Jenkinsfile.*'] = 'groovy',
+  },
+})
+
+-- Enable spell check and completion for prose and commit messages
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'gitcommit', 'md', 'markdown', 'text' },
+  command = 'setlocal spell'
+})
+table.insert(vim.opt.complete, 'kspell')

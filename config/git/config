@@ -23,5 +23,7 @@
   editor = nvim
 [init]
   defaultBranch = main
+[stash]
+  showPatch = true
 [include]
   path = ~/.gitconfig.local

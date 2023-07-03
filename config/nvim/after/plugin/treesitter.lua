@@ -1,13 +1,13 @@
 require'nvim-treesitter.configs'.setup({
   ensure_installed = {
     'bash',
-    'css',
+    'hcl',
     'html',
-    'javascript',
     'json',
     'lua',
     'markdown',
     'markdown_inline',
+    'scss',
     'typescript',
     'yaml',
   },
@@ -31,3 +31,6 @@ require'nvim-treesitter.configs'.setup({
     },
   },
 })
+
+vim.treesitter.language.register('hcl', 'terraform')
+vim.treesitter.language.register('hcl', 'terraform-vars')

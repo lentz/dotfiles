@@ -27,7 +27,15 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   {
     'nvim-lualine/lualine.nvim',
-    opts = { sections = { lualine_x = { 'filetype' } } },
+    opts = {
+      inactive_sections = {
+        lualine_c = { { 'filename', path = 2 } },
+      },
+      sections = {
+        lualine_c = { { 'filename', path = 2 } },
+        lualine_x = { 'filetype' },
+      },
+    },
   },
   {
     'nvim-treesitter/nvim-treesitter',
@@ -37,7 +45,13 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-unimpaired',
   'tpope/vim-surround',
-  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
+  },
   { 'numToStr/Navigator.nvim', config = true },
   {
     'VonHeikemen/lsp-zero.nvim',

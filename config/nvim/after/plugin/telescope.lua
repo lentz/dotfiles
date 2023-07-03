@@ -14,7 +14,10 @@ telescope.setup({
   },
 })
 
-vim.opt.autochdir = true
+telescope.load_extension('fzf')
+
+vim.opt.autochdir = true -- cd to the dir of the current buffer to better support finding files
+
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files)
 vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>lg', require('telescope.builtin').live_grep)
