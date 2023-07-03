@@ -7,6 +7,7 @@ brew "jq" # work with JSON files in shell scripts
 brew "neovim" # A better vim
 brew "node@16" # Node runtime
 brew "ripgrep" # very fast file searcher
+brew "ruby@3.1" # Ruby runtime
 brew "tmux" # terminal multiplexer
 brew "tree" # pretty-print directory contents
 brew "wget" # internet file retriever
