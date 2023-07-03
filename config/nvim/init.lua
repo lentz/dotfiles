@@ -1,5 +1,6 @@
 require('settings')
 require('mappings')
+pcall(require, 'local') -- lua/local.lua if it exists
 
 -- Install Lazy if necessary to manage plugins
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
