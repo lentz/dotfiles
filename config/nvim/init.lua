@@ -71,7 +71,6 @@ require('lazy').setup({
       {'L3MON4D3/LuaSnip'},
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},
-      {'jose-elias-alvarez/null-ls.nvim'},
     }
   },
   {
@@ -85,4 +84,5 @@ require('lazy').setup({
     end,
   },
   { 'numToStr/Comment.nvim', config = true },
+  { 'mhartington/formatter.nvim' },
 })
