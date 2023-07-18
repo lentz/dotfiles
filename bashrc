@@ -29,10 +29,10 @@ if [[ -n "$PS1" ]]; then
 
   YELLOW="\[$(tput setaf 3)\]"
   BLUE="\[$(tput setaf 4)\]"
-  ORANGE="\[$(tput setaf 1)\]"
+  RED="\[$(tput setaf 1)\]"
   RESET="\[$(tput sgr0)\]"
 
-  PROMPT_COMMAND='__git_ps1 "[${ORANGE}devbox ${BLUE}\w${RESET}" "]\\\$ "'
+  PROMPT_COMMAND='__git_ps1 "[${RED}devbox ${BLUE}\w${RESET}" "]\\\$ "'
 
   # FZF autocompletion
   [[ -x "$(command -v rg)" ]] && export FZF_DEFAULT_COMMAND='rg --files --follow'
