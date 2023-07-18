@@ -21,18 +21,13 @@ vim.opt.diffopt = 'vertical,linematch:60' -- Default to vertical diffs and impro
 vim.opt.wildmode = { 'list', 'longest' } -- complete files like a shell
 vim.opt.updatetime = 300 -- Avoid delay of default 4s update time
 vim.opt.termguicolors = true -- Enable 24-bit RGB colors
+vim.opt.number = true
 
 -- Show additional lines when on the last line
 vim.opt.scrolloff = 1
 vim.opt.sidescrolloff = 5
 table.insert(vim.opt.display, 'lastline')
 vim.opt.laststatus = 2
-
--- Use 2 spaces for all indentation
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.number = true
 
 -- Open new split panes to right and bottom, which feels more natural
 vim.opt.splitbelow = true
