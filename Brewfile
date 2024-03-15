@@ -7,6 +7,7 @@ brew "neovim" # A better vim
 brew "node@18" # Node runtime
 brew "ripgrep" # very fast file searcher
 brew "ruby@3.2" # Ruby runtime
+brew "libpq" # Postgres lib needed for pg ruby gem
 brew "tmux" # terminal multiplexer
 brew "tree" # pretty-print directory contents
 brew "wget" # internet file retriever
