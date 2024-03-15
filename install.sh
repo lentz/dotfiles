@@ -11,6 +11,5 @@ ln -nsf ~/.dotfiles/config/git ~/.config/git
 ln -sf ~/.dotfiles/zshrc ~/.zshrc
 ln -sf ~/.dotfiles/aliases.sh ~/.aliases.sh
 ln -sf ~/.dotfiles/git-prompt.sh ~/.git-prompt.sh
-ln -sf ~/.dotfiles/dir_colors ~/.dir_colors
 
 echo "Complete!"

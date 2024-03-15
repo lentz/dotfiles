@@ -42,9 +42,6 @@ if [[ -n "$PS1" ]]; then
   # Aliases
   [[ -f ~/.aliases.sh ]] && source ~/.aliases.sh
 
-  # Must occur after local config for aliases
-  eval `dircolors ~/.dir_colors`
-
   # Angular CLI autocompletion
   if [[ -x "$(command -v ng)" ]]; then
     [[ ! -f ~/.ng-completion.sh ]] && ng completion script > ~/.ng-completion.sh

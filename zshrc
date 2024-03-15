@@ -42,9 +42,6 @@ export PATH=./node_modules/.bin:$PATH
 # Aliases
 [[ -f ~/.aliases.sh ]] && source ~/.aliases.sh
 
-# Must occur after local config for aliases
-eval `dircolors ~/.dir_colors`
-
 # FZF autocompletion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --follow'
