@@ -1,4 +1,3 @@
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
 brew "fzf" # Fuzzy file searcher, used in scripts and in vim
