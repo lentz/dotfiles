@@ -50,8 +50,5 @@ eval `dircolors ~/.dir_colors`
 export FZF_DEFAULT_COMMAND='rg --files --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # Fix issue running Ruby and Python on MacOS
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
