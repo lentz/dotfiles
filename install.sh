@@ -15,4 +15,6 @@ ln -sf ~/.dotfiles/git-prompt.sh ~/.git-prompt.sh
 echo "Setup FZF shell integration"
 /opt/homebrew/opt/fzf/install --no-bash --no-fish --no-update-rc
 
+npm install --global @fsouza/prettierd
+
 echo "Complete!"
