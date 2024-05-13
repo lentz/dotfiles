@@ -1,5 +1,6 @@
 tap "homebrew/cask-fonts"
 
+brew "flyctl" # Fly.io CLI
 brew "fzf" # Fuzzy file searcher, used in scripts and in vim
 brew "git" # Git version control (latest version)
 brew "jq" # work with JSON files in shell scripts
