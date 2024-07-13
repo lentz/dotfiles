@@ -84,5 +84,5 @@ require('lazy').setup({
     end,
   },
   { 'numToStr/Comment.nvim', config = true },
-  { 'mhartington/formatter.nvim' },
+  'stevearc/conform.nvim'
 })
