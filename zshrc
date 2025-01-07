@@ -27,7 +27,7 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWUPSTREAM="verbose"
-precmd () { __git_ps1 "[%{$fg[yellow]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m %{$fg_no_bold[blue]%}%~%{$reset_color%}" "]$ " " (%s)" }
+precmd () { __git_ps1 "[%{$fg_bold[red]%}%m %{$fg_no_bold[blue]%}%~%{$reset_color%}" "]$ " " (%s)" }
 
 export EDITOR=vim
 
