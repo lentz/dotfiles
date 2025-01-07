@@ -3,9 +3,9 @@
 brew bundle
 
 mkdir -p ~/.config
-ln -nsf ~/.dotfiles/config/alacritty ~/.config/alacritty
 ln -nsf ~/.dotfiles/config/tmux ~/.config/tmux
 ln -nsf ~/.dotfiles/config/nvim ~/.config/nvim
+ln -nsf ~/.dotfiles/config/ghostty ~/.config/ghostty
 ln -nsf ~/.dotfiles/config/git ~/.config/git
 
 ln -sf ~/.dotfiles/zshrc ~/.zshrc
