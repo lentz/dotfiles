@@ -32,6 +32,3 @@ require'nvim-treesitter.configs'.setup({
     },
   },
 })
-
-vim.treesitter.language.register('hcl', 'terraform')
-vim.treesitter.language.register('hcl', 'terraform-vars')

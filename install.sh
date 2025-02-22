@@ -15,4 +15,9 @@ ln -sf ~/.dotfiles/git-prompt.sh ~/.git-prompt.sh
 echo "Setup FZF shell integration"
 /opt/homebrew/opt/fzf/install --no-bash --no-fish --no-update-rc
 
+brew bundle
+
+echo "Installing Language Servers"
+npm install --global vscode-langservers-extracted typescript-language-server @angular/language-server
+
 echo "Complete!"
