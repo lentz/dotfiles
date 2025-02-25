@@ -15,13 +15,15 @@ require('mini.comment').setup()
 require('mini.files').setup()
 vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<cr>', { desc = 'File explorer' })
 
+require('mini.extra').setup()
+
 require('mini.pick').setup({
   mappings = {
     move_down  = '<C-j>',
     move_up    = '<C-k>',
   }
 })
-vim.keymap.set('n', '<C-p>', '<cmd>Pick files<cr>', { desc = 'Search all files' })
+vim.keymap.set('n', '<C-p>', '<cmd>Pick git_files<cr>', { desc = 'Search tracked files' })
 
 require('mini.diff').setup()
 
