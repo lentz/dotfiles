@@ -24,6 +24,7 @@ require('mini.pick').setup({
   }
 })
 vim.keymap.set('n', '<C-p>', '<cmd>Pick git_files<cr>', { desc = 'Search tracked files' })
+vim.keymap.set('n', '<leader>d', '<cmd>Pick diagnostic scope="current"<cr>', { desc = 'Search diagnostics' })
 
 require('mini.diff').setup()
 
