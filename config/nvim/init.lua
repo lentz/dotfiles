@@ -47,47 +47,32 @@ vim.keymap.set('n', '<leader><space>', ':nohlsearch<CR>') -- Hide search highlig
 -- Plugins
 -- -------
 
--- Install Lazy if necessary to manage plugins
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    'git',
-    'clone',
-    '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable',
-    lazypath,
-  })
+-- Clone 'mini.nvim' manually in a way that it gets managed by 'mini.deps'
+local path_package = vim.fn.stdpath('data') .. '/site/'
+local mini_path = path_package .. 'pack/deps/start/mini.nvim'
+if not vim.loop.fs_stat(mini_path) then
+  vim.cmd('echo "Installing `mini.nvim`" | redraw')
+  local clone_cmd = { 'git', 'clone', '--filter=blob:none', 'https://github.com/echasnovski/mini.nvim', mini_path }
+  vim.fn.system(clone_cmd)
+  vim.cmd('packadd mini.nvim | helptags ALL')
+  vim.cmd('echo "Installed `mini.nvim`" | redraw')
 end
-vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  { 'echasnovski/mini.nvim', version = false },
-  {
-    'ellisonleao/gruvbox.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme('gruvbox')
-    end,
-  },
-  {
-    'nvim-treesitter/nvim-treesitter',
-    dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    build = ':TSUpdate',
-  },
-  'tpope/vim-fugitive',
-  { 'numToStr/Navigator.nvim', config = true },
-  'neovim/nvim-lspconfig',
-  {
-    'nvim-tree/nvim-tree.lua',
-    config = function()
-      -- Disable netrw
-      vim.g.loaded_netrw = 1
-      vim.g.loaded_netrwPlugin = 1
+require('mini.deps').setup()
 
-      require('nvim-tree').setup()
-    end,
-  },
-  'stevearc/conform.nvim'
+MiniDeps.add('ellisonleao/gruvbox.nvim')
+vim.cmd.colorscheme('gruvbox')
+
+MiniDeps.add({
+  source = 'nvim-treesitter/nvim-treesitter-textobjects',
+  depends = { 'nvim-treesitter/nvim-treesitter' },
+  hooks = { post_checkout = function() vim.cmd('TSUpdate') end },
 })
+
+MiniDeps.add('tpope/vim-fugitive')
+
+MiniDeps.add('numToStr/Navigator.nvim')
+
+MiniDeps.add('neovim/nvim-lspconfig')
+
+MiniDeps.add('stevearc/conform.nvim')
