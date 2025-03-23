@@ -1,5 +1,8 @@
 require('lspconfig').angularls.setup({})
 require('lspconfig').cssls.setup({})
+require('lspconfig').dockerls.setup({})
+require('lspconfig').docker_compose_language_service.setup({})
+vim.filetype.add({ filename = { ['compose.yaml'] = 'yaml.docker-compose' } })
 require('lspconfig').jsonls.setup({})
 require('lspconfig').ts_ls.setup({})
 

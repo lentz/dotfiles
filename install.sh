@@ -18,6 +18,11 @@ echo "Setup FZF shell integration"
 brew bundle
 
 echo "Installing Language Servers"
-npm install --global vscode-langservers-extracted typescript-language-server @angular/language-server
+npm install --global \
+  @microsoft/compose-language-service \
+  dockerfile-language-server-nodejs \
+  vscode-langservers-extracted \
+  typescript-language-server \
+  @angular/language-server
 
 echo "Complete!"
