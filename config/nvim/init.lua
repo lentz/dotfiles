@@ -33,6 +33,25 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 
+-- Ensure Compose LSP attaches to Compose yaml files
+vim.filetype.add({ filename = { ['compose.yaml'] = 'yaml.docker-compose' } })
+
+-- Enable LSPs
+vim.lsp.enable({ 'angularls', 'cssls', 'dockerls', 'docker_compose_language_service', 'jsonls', 'ts_ls' })
+
+-- Customize diagnostic signs
+vim.diagnostic.config({
+  virtual_text = { prefix = '●' },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '✘',
+      [vim.diagnostic.severity.WARN] = '▲',
+      [vim.diagnostic.severity.HINT] = '⚑',
+      [vim.diagnostic.severity.INFO] = '»',
+    },
+  },
+})
+
 -- Mappings
 -- --------
 
@@ -73,7 +92,5 @@ MiniDeps.add({
 MiniDeps.add('tpope/vim-fugitive')
 
 MiniDeps.add('numToStr/Navigator.nvim')
-
-MiniDeps.add('neovim/nvim-lspconfig')
 
 MiniDeps.add('stevearc/conform.nvim')
