@@ -7,6 +7,7 @@ ln -nsf ~/.dotfiles/config/tmux ~/.config/tmux
 ln -nsf ~/.dotfiles/config/nvim ~/.config/nvim
 ln -nsf ~/.dotfiles/config/ghostty ~/.config/ghostty
 ln -nsf ~/.dotfiles/config/git ~/.config/git
+ln -nsf ~/.dotfiles/config/homebrew ~/.config/homebrew
 
 ln -sf ~/.dotfiles/zshrc ~/.zshrc
 ln -sf ~/.dotfiles/aliases.sh ~/.aliases.sh

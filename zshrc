@@ -36,6 +36,8 @@ export LESS="-r -S"
 
 export PATH=./node_modules/.bin:$PATH
 
+export XDG_CONFIG_HOME=~/.config
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
