@@ -33,8 +33,6 @@ require('mini.pairs').setup()
 
 require('mini.bracketed').setup()
 
-require('mini.comment').setup()
-
 require('mini.files').setup()
 vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<cr>', { desc = 'File explorer' })
 
