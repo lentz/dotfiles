@@ -66,31 +66,22 @@ vim.keymap.set('n', '<leader><space>', ':nohlsearch<CR>') -- Hide search highlig
 -- Plugins
 -- -------
 
--- Clone 'mini.nvim' manually in a way that it gets managed by 'mini.deps'
-local path_package = vim.fn.stdpath('data') .. '/site/'
-local mini_path = path_package .. 'pack/deps/start/mini.nvim'
-if not vim.loop.fs_stat(mini_path) then
-  vim.cmd('echo "Installing `mini.nvim`" | redraw')
-  local clone_cmd = { 'git', 'clone', '--filter=blob:none', '--branch', 'stable', 'https://github.com/nvim-mini/mini.nvim', mini_path }
-  vim.fn.system(clone_cmd)
-  vim.cmd('packadd mini.nvim | helptags ALL')
-  vim.cmd('echo "Installed `mini.nvim`" | redraw')
-end
-require('mini.deps').setup()
+vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)
+  local name, kind = ev.data.spec.name, ev.data.kind
+  if name == 'nvim-treesitter' and kind == 'update' then
+    if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
+    vim.cmd('TSUpdate')
+  end
+end })
 
-MiniDeps.add({ name = 'mini.nvim', checkout = 'stable' })
-
-MiniDeps.add('ellisonleao/gruvbox.nvim')
-vim.cmd.colorscheme('gruvbox')
-
-MiniDeps.add({
-  source = 'nvim-treesitter/nvim-treesitter-textobjects',
-  depends = { 'nvim-treesitter/nvim-treesitter' },
-  hooks = { post_checkout = function() vim.cmd('TSUpdate') end },
+vim.pack.add({
+  { src = 'https://github.com/nvim-mini/mini.nvim', version = 'stable' },
+  'https://github.com/ellisonleao/gruvbox.nvim',
+  'https://github.com/tpope/vim-fugitive',
+  'https://github.com/numToStr/Navigator.nvim',
+  'https://github.com/stevearc/conform.nvim',
+  'https://github.com/nvim-treesitter/nvim-treesitter',
+  'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
 })
 
-MiniDeps.add('tpope/vim-fugitive')
-
-MiniDeps.add('numToStr/Navigator.nvim')
-
-MiniDeps.add('stevearc/conform.nvim')
+vim.cmd.colorscheme('gruvbox')

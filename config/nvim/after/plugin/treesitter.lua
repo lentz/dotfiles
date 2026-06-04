@@ -1,34 +1,76 @@
-require'nvim-treesitter.configs'.setup({
-  ensure_installed = {
-    'bash',
-    'dockerfile',
-    'hcl',
-    'html',
-    'json',
-    'lua',
-    'markdown',
-    'markdown_inline',
-    'scss',
-    'typescript',
-    'yaml',
-  },
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-  indent = {
-    enable = true,
-  },
-  textobjects = {
-    select = {
-      enable = true,
-      lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-      keymaps = {
-        ['aa'] = '@parameter.outer',
-        ['ia'] = '@parameter.inner',
-        ['af'] = '@function.outer',
-        ['if'] = '@function.inner',
-      },
-    },
-  },
+require('nvim-treesitter').install({
+  'bash',
+  'dockerfile',
+  'hcl',
+  'html',
+  'json',
+  'lua',
+  'markdown',
+  'markdown_inline',
+  'scss',
+  'typescript',
+  'yaml',
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'bash' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'dockerfile' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'hcl' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'html' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'json' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'scss' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'lua' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'markdown' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'markdown_inline' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'typescript' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'yaml' },
+  callback = function() vim.treesitter.start() end,
+})
+
+vim.keymap.set({ 'x', 'o' }, 'af', function()
+  require('nvim-treesitter-textobjects.select').select_textobject('@function.outer', 'textobjects')
+end)
+
+vim.keymap.set({ 'x', 'o' }, 'if', function()
+  require('nvim-treesitter-textobjects.select').select_textobject('@function.inner', 'textobjects')
+end)
