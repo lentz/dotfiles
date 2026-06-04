@@ -10,6 +10,7 @@
   amend = commit --amend
   fpush = push --force-with-lease
 [push]
+  autoSetupRemote = true
   default = simple
   followTags = true
 [pull]
